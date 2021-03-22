@@ -1,0 +1,14 @@
+jQuery(document).ready(function(){
+	var height = jQuery(".youtube-wrapper").find("iframe").attr("height");
+	var width = jQuery(".youtube-wrapper").find("iframe").attr("width");
+	var current_width = jQuery(".youtube-wrapper").find("iframe").width();
+	jQuery(".youtube-wrapper").find("iframe").height((current_width / width) * height);
+
+	jQuery( window ).resize(function(){
+		var height = jQuery(".youtube-wrapper").find("iframe").attr("height");
+		var width = jQuery(".youtube-wrapper").find("iframe").attr("width");
+		var current_width = jQuery(".youtube-wrapper").find("iframe").width();
+		jQuery(".youtube-wrapper").find("iframe").height((current_width / width) * height);
+	});
+});
+	
